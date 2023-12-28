@@ -27,6 +27,7 @@ write.table(geneInfor,file= 'CCBR_1190_gene_order_File.txt',sep = '\t',quote = F
 
 # Run infercnv
 options(stringsAsFactors = F)
+
 CountFile <- "CCBR_1190_mtx.txt"
 AnnotationFiles='CCBR_1190_AnnotationFiles.txt' 
 gene_order_File='CCBR_1190_gene_order_File.txt'
