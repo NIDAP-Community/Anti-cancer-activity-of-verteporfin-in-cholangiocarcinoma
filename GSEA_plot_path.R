@@ -382,7 +382,7 @@ genescore_df <- DE
 #genescore_df$Rank[which(!is.finite(genescore_grouped$Rank))] <- 9999
 gex_df <- c()
 metadata_df <- c()
-gsea_df <- read.csv("~/data/Gsea_malign.csv")
+gsea_df <- read.csv("~/files_for_analysis/Gsea_malign.csv")
 
 gex_transformation = 'reference median centering'
 reference_phenotype = TRUE

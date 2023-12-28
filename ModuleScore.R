@@ -18,7 +18,7 @@ library(utils)
 #Basic Parameters:
 sample_names = eval(parse(text=gsub('\\[\\]','c()','c("Vehicle1","Vehicle2","Vehicle3","VP1","VP2","VP3")')))
 sample_to_display <- c("Vehicle1","Vehicle2","Vehicle3","VP1","VP2","VP3")
-geneset_dataframe <- read.csv("~/data/Manuscript_Code/MS_Markers.csv")
+geneset_dataframe <- read.csv("~/files_for_analysis/Manuscript_Code/MS_Markers.csv")
 proteins_presence <- FALSE
 celltypes_to_analyze <- c("B_cells","T_cells","NK_cells","TAM","Dendritic_cells","TAM_M1","TAM_M2","CD8","CD4","Treg","Endothelial_cells","Fibroblasts","Epithelial_cells","Kupffer_cells")
 manual_threshold <- c(0.3,0.2,0.2,0.2,0.2,0.375,0.34,0.2,0.2,0.1,0.1,0.1,0.1,0.13)
