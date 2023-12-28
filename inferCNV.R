@@ -4,6 +4,8 @@ library(infercnv)
 library(pheatmap)
 
 merged_so_cnv <- SO
+setwd("/Users/bianjh/Documents/R_files/Xie/CCBR_1190/inferCNV")
+merged_so_cnv <- readRDS("CCBR_1190_infercnv_so.rds")
 
 Idents(merged_so_cnv) <- merged_so_cnv@meta.data$Likely_CellType
 merged_so_cnv <- subset(merged_so_cnv, idents = c("CD4","CD8","Epithelial_cells"))
@@ -27,7 +29,10 @@ write.table(geneInfor,file= 'CCBR_1190_gene_order_File.txt',sep = '\t',quote = F
 
 # Run infercnv
 options(stringsAsFactors = F)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6545e6b29cad23413ca1763500cafe3119dc14b4
 CountFile <- "CCBR_1190_mtx.txt"
 AnnotationFiles='CCBR_1190_AnnotationFiles.txt' 
 gene_order_File='CCBR_1190_gene_order_File.txt'
@@ -83,10 +88,17 @@ cnv_meta_epi <- cnv_meta_epi %>% mutate(Likely_CellType = case_when(
 
 table(cnv_meta_epi$orig_ident, cnv_meta_epi$Likely_CellType)
 
+<<<<<<< HEAD
 #write.csv(cnv_meta_epi,"CCBR_1190_epi_meta_w_cnv.csv")
 
 # Look at distribution of cnv scores across Malignant Cells and Cholangiocyte
 test <- read.csv("CCBR_1119_epi_meta_w_cnv.csv")
+=======
+write.csv(cnv_meta_epi,"CCBR_1190_epi_meta_w_cnv.csv")
+
+
+test <- read.csv("/Users/bianjh/Documents/R_files/Xie/CCBR_1119/CCBR_1119_infercnv/CCBR_1119_epi_meta_w_cnv.csv")
+>>>>>>> 6545e6b29cad23413ca1763500cafe3119dc14b4
 
 cnv_stat <- test %>% group_by(Likely_CellType) %>% summarise(cnv_score_avg = mean(cnv_scores))
 

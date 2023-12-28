@@ -16,7 +16,7 @@ library(tidyverse)
 SO@meta.data$pooled_ident <- str_sub(SO@meta.data$orig.ident, 1, nchar(SO@meta.data$orig.ident)-1)
 
 # Append information from infercnv analysis
-cnv_meta <- read.csv("~/data/CCBR_1190_epi_meta_w_cnv.csv")
+cnv_meta <- read.csv("~/files_for_analysis/CCBR_1190_epi_meta_w_cnv.csv")
 cnv_meta$Barcode2 <- paste(cnv_meta$new_sample_name,sub(".*_([^_]+)$", "\\1", cnv_meta$Barcode),sep="_")
 
 SO@meta.data$cnv_score <- cnv_meta$cnv_scores[match(SO@meta.data$Barcode, cnv_meta$Barcode2)]
@@ -52,7 +52,7 @@ print(g)
 #source("Geneset_Enrichment.R")
 
 # upregulated pathways
-df_tot <- read.csv("~/data/Gsea_malign.csv")
+df_tot <- read.csv("~/files_for_analysis/Gsea_malign.csv")
 
 df <- head(df_tot[order(df_tot$padj),],30)
 

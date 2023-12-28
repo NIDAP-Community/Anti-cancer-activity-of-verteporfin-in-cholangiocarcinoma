@@ -13,7 +13,9 @@ library(dplyr); library(fgsea); library(grid); library(gridExtra); library(gtabl
 
 ## datasets
 
-geneset_db = read.csv("Ccbr_1190_merge_pathway_data") # gene set collection is pinned (can be changed but assumes presence of columns named: "species", "collection", "gene_set_name", "gene_symbol")
+# Note msigDB_file_w_spike_in was note uploaded due to git file size limit, available by request
+#  alternatively, users can create their own by rbind msigDB_v6.2 with Yap1_spike_in.csv
+geneset_db = msigDB_file_w_spike_in # gene set collection is pinned (can be changed but assumes presence of columns named: "species", "collection", "gene_set_name", "gene_symbol")
 genescore_df = DE
 
 ## ranking
