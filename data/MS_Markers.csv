@@ -1,0 +1,7 @@
+﻿B_cells,T_cells,NK_cells,TAM,Dendritic_cells,TAM_M1,TAM_M2,CD8,CD4,Treg,Endothelial_cells,Fibroblasts,Epithelial_cells,Kupffer_cells
+Ms4a1,Cd3d,Cd7,Cd14,Clec9a,Cd80,Cd163,Cd8a,Cd4,Foxp3,Eng,Col1a2,Epcam,Clec4f
+Cd79a,Cd3e,Nkg7,Cd68,Cd1c,Cd9,Apoc1,,,Cd25,,Pdgfrb,Krt19,
+,Cd3g,Prf1,Csf1r,,Olr1,Apoe,,,,,Col3a1,Krt7,
+,,Gzmb,,,Alox5ap,Acp5,,,,,Col6a1,Tm4sf4,
+,,,,,,C1qa,,,,,,,
+,,,,,,C1qb,,,,,,,
